@@ -1,0 +1,29 @@
+<ion-view class="settings-view">
+  <ion-nav-buttons side="left">
+    
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <span>Сообщение в общий чат</span>
+  </ion-nav-title>
+  <ion-content style="background: #ffffff;">
+    <div class="row">
+    	<div class="col col-50 wglt">
+    		<button type="button" class="button button-positive button-block" ng-click="$ionicGoBack($event)">
+                Отмена
+            </button>
+    	</div>
+    	
+    	<div class="col col-50 wgrt">
+    		<button type="button" class="button button-positive button-block" ng-click="doSend()">
+                Отправить
+            </button>
+    	</div>
+    </div>
+    
+    <div class="row">
+    	<div class="col">
+    		<textarea class="message-text" name="message_text" ng-model="message.text" required></textarea>
+    	</div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-view class="settings-view">
+  <ion-nav-buttons side="left">
+    <!--<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>-->
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <span>Профиль</span>
+  </ion-nav-title>
+  <ion-content>
+    <ul class="list">
+      <div class="item-header">
+	  <ion-slide-box show-pager="true" delegate-handle="profile-slider" does-continue="true">
+	   <ion-slide ng-repeat="(key,img) in publicProfile.images" >	   
+        <div class="list card" >
+          <div class="item item-image">		    
+            <img ng-src="{{img}}" />
+          </div>          
+        </div>				
+      </ion-slide> 
+     </ion-slide-box>  		 	  	  
+	 
+          <!--<img ng-src="img/users/homer.jpg" ng-click="getPhoto()"><br>		  -->		  
+      </div>
+	  <ion-item class="item-pf">
+	  	  <div class="row">
+              <div class="col"><div class="name-pf" ng-model="publicuser.name">{{publicProfile.name}} <span>( {{publicProfile.sexicon}} {{publicProfile.birthday}} )</span></div></div>
+		  <div class="col"><div class="city-pf">{{publicProfile.city}}</div></div>
+	      </div>
+    </ul>
+	<!--<button class="button button-block button-stable button-pf">
+        Все фотографии
+      </button>-->
+	  <a class="button button-block button-stable button-pf" href="#/app/chat/{{publicProfile.id}}">
+        Личное сообщение
+      </a>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,61 @@
+<ion-view class="settings-view">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon">
+	<div ng-if="unread>0" class="tochka_top"></div>
+	</button>
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <span>Курорт</span>
+  </ion-nav-title>
+  <ion-content>
+    <ul class="list profil">
+	<li class="item item-toggle">
+     Вы на курорте?
+     <label class="toggle toggle-calm">
+       <input type="checkbox" ng-model="hotel.is_hotel" value="1">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+	</li>
+      <label class="item item-input item-select">
+        <span class="input-label">Страна</span>
+        <select ng-model="hotel.hotel_country">
+    		<option ng-selected="{{operator.name == hotel.hotel_country}}"
+	            ng-repeat="operator in countries"
+	            value="{{operator.name}}">
+	      		{{operator.name}}
+    		</option>
+		</select>
+      </label>
+      <label class="item item-input item-select">
+        <span class="input-label">Город</span>
+        <select ng-model="hotel.hotel_city">
+          	<option ng-selected="{{operator.name == hotel.hotel_city}}"
+	            ng-repeat="operator in getCities()"
+	            value="{{operator.name}}">
+	      		{{operator.name}}
+    		</option>
+        </select>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Отель</span>
+        <input class="input_data" type="text" ng-model="hotel.hotel_place" />
+      </label>
+        
+      <label class="item item-input">
+        <span class="input-label">Период пребывания с</span>
+        <input class="input_data" width="130px" type="date" value="01.01.1987" ng-model="hotel.hotel_from" />
+      </label>
+	        <label class="item item-input">
+        <span class="input-label">Период пребывания по</span>
+        <input type="date" width="130px" class="input_data" value="01.01.1987" ng-model="hotel.hotel_to" />
+      </label>
+
+
+      <button class="button button-block button-stable button-my" ng-click="doSaveHotel()">	
+        Сохранить
+      </button>
+    </ul>
+  </ion-content>
+</ion-view>

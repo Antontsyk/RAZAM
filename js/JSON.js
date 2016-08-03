@@ -1,0 +1,1 @@
+var a=$.getJSON("http://m-razam.tolk.by/countries.json");		

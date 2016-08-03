@@ -1,0 +1,30 @@
+<ion-view class="feeds-categories-view">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon">
+	<div ng-if="unread>0" class="tochka_top"></div>	
+	</button>
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <span>Личные сообщения</span>
+  </ion-nav-title>
+  <ion-content>
+    <div class="categories-list">	
+      <div ng-repeat="category in my_messages" class="category">	          
+        <a class="feed-category" href="#/app/chat/{{category.id}}"  ng-style="category.unread && {'background-color':'#eee'} || {'background-color': '#fff'}"  >
+            <div class="row">                                       
+                <div class="col-40" style="padding: 0; overflow: hidden; width: 140px; height: 140px;">
+                    <img class="category-image" ng-src={{category.avatar}} >
+                </div>
+
+                <div class="col-50" style="padding: 10px;">				
+                    <span class="category-title">{{category.name}}</span>
+					<div style="clear:both;"></div>                    
+					<img ng-if="user.hash === category.userId" class="two_image" ng-src="{{user.avatar}}"/>					
+                    <p class="category-description">{{category.message}}</p>
+                </div>
+            </div>
+        </a>								           					
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

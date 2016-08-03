@@ -1,0 +1,74 @@
+[
+	{
+		"id":"1",
+		"title":"Настя, 21",
+		"image":"img/users/marge.jpg",
+        "description":"Привет, меня зовут Настя!",
+		"feed_sources":[
+			{
+				"id":"bbc",
+				"title":"BBC",
+				"description":"The latest stories from the World section of the BBC News web site.",
+				"image":"img/feeds/logos/bbc.jpg",
+				"url":"http://feeds.bbci.co.uk/news/world/rss.xml"
+			},
+			{
+				"id":"reuters",
+				"title":"Reuters",
+				"description":"Reuters.com is your source for breaking news, business, financial and investing news, including personal finance and stocks. Reuters is the leading global provider of news, financial information and technology solutions to the world's media, financial institutions, businesses and individuals.",
+				"image":"img/feeds/logos/reuters.jpg",
+				"url":"http://feeds.reuters.com/Reuters/worldNews"
+			},
+			{
+				"id":"cnn",
+				"title":"CNN",
+				"description":"CNN.com delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.",
+				"image":"img/feeds/logos/cnn.jpg",
+				"url":"http://rss.cnn.com/rss/cnn_world.rss"
+			},
+			{
+				"id":"the-guardian",
+				"title":"The Guardian",
+				"description":"Latest World news, comment and analysis from the Guardian, the world's leading liberal voice",
+				"image":"img/feeds/logos/the-guardian.jpg",
+				"url":"http://www.theguardian.com/world/rss"
+			}
+		]
+	},
+	{
+		"id":"2",
+		"title":"Викусик, 18",
+		"image":"img/users/selma.jpg",
+        "description":"Да я согласна",
+		"feed_sources":[
+			{
+				"id":"the-guardian",
+				"title":"The Guardian",
+				"description":"Latest news and features from theguardian.com, the world's leading liberal voice",
+				"image":"img/feeds/logos/the-guardian.jpg",
+				"url":"http://www.theguardian.com/sport/rss"
+			},
+			{
+				"id":"bbc",
+				"title":"BBC",
+				"description":"The latest stories from the Sport section of the BBC Sport web site.",
+				"image":"img/feeds/logos/bbc.jpg",
+				"url":"http://feeds.bbci.co.uk/sport/0/rss.xml"
+			},
+			{
+				"id":"fox-sports",
+				"title":"FOX Sports",
+				"description":"FOX Sports Generic Content Feed",
+				"image":"img/feeds/logos/fox-sports.jpg",
+				"url":"http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU"
+			},
+			{
+				"id":"espn",
+				"title":"ESPN",
+				"description":"Latest news from ESPN.com",
+				"image":"img/feeds/logos/espn.jpg",
+				"url":"http://sports.espn.go.com/espn/rss/news"
+			}
+		]
+	}
+]

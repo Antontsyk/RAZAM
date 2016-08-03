@@ -1,0 +1,35 @@
+<ion-view class="login-view">
+  <ion-content scroll="false">
+    <div class="row">
+      <div class="col col-center">
+        <div class="card login-container" content-tabs tabsdata='tabsdata'>
+          <form name="login_form" class="" novalidate>
+            <div class="list">
+              <label class="item item-input logg">
+                <input type="email" placeholder="Email" name="user_email" ng-model="user.email" required>
+				<img src="img/mail.png" />
+              </label>
+              <label class="item item-input logg">
+                 <input type="password" placeholder="Пароль" name="user_password" ng-model="user.password" required show-hide>
+              </label>
+            </div>
+            dsfdsrgdfgdf
+              <div class="item item-body bottom-content">
+              <button type="submit" class="button button-positive button-block" ng-click="doLogIn()" ng-disabled="login_form.user_email.$invalid || login_form.user_password.$invalid">
+                ВОЙТИ
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="alternative-actions">
+          <button class="forgot-password button button-small button-clear button-light" ng-click="goToForgotPassword()">
+            Забыли пароль?
+          </button>
+          <button class="sign-up button button-small button-clear button-light" ng-click="goToSignUp()">
+            Регистрация
+          </button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

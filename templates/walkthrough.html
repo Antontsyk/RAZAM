@@ -1,0 +1,49 @@
+<ion-view class="walkthrough-view">
+  <ion-content >
+    <div class="top-content row">
+      <div class="col col-center">
+        <img ng-src="img/logo.png" width="100%">
+      </div>
+    </div>
+	
+	<div class="main-content row">
+		<div class="col">
+			<form name="login_form" class="" novalidate>
+				<div class="list">
+				  <label class="item item-input in_mail" style="background-color:none!important;">
+					<input style="background-color:none!important;" type="email" placeholder="Email" name="user_email" ng-model="user.email" required>
+					<div class="wingg"><img class="img_log_mail" src="img/mail.png" /></div>
+				  </label>
+				  <label class="item item-input in_pass" style="background-color:none!important;">
+					 <input style="background-color:none!important;" type="password" placeholder="Пароль" name="user_password" ng-model="user.password" required>
+					 <div class="wingg"><img class="img_log_zamok" src="img/zamok.png" /></div>
+				  </label>
+				</div>
+			</form>
+		</div>
+	</div>	
+	<div class="alternative-actions row">
+			<button class="forgot-password button button-small button-clear button-light" ng-click="goToForgotPassword()">
+				Забыли пароль?
+			</button>						
+			<button class="sign-up button button-small button-clear button-light" ng-click="goToSignUp()">
+				Регистрация
+			</button>
+        </div>
+		<div style="clear:both;"></div>
+		<div class="alternative-actions row">		                
+		    <div class="check_b RowClass"><input type="checkbox" class="checkbox" ng-model="mySwitch" id="checkbox" style="position: absolute!important;left: 8px!important;" name=agreebox></div>
+		    <div class=""><div class="polzv"  ><label for="checkbox" style="position: absolute;cursor: pointer;width: 210px;left: 20px;top: 0; margin-left:7px;">Пользовательское соглашение</label></div>			
+			</div>
+		</div>
+		
+	
+    <div class="bottom-content row">
+		<div class="col col-center">
+			<button type="submit" class="button button-positive button-block" ng-click="doLogIn()" ng-disabled="login_form.user_email.$invalid || login_form.user_password.$invalid || !mySwitch ">
+				ВОЙТИ
+            </button>
+		</div>
+    </div>
+  </ion-content>
+</ion-view>
